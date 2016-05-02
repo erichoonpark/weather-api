@@ -5,7 +5,7 @@ var request = require('request');
 app.use(express.static('public'));
 app.get("/weather", weatherAPIRequest);
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port 3000!');
 });
 
